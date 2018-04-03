@@ -2,6 +2,7 @@
 
 # Name of the dialect, this will define the header of the dialect documents
 dialect: ABOUT
+
 version: 0.1
 
 # Vocabularies and externals can be referenced to use those terms in the dialect nodes
@@ -14,8 +15,8 @@ external:
 # Probably licenses and contributors
 # should be allowed to be declared in fragments
 # and libraries so they can be linked and reused
-raml:
-  module:
+documents:
+  library:
     declares:
       licenses: LicenseNode
       contributors: ContributorNode
@@ -23,7 +24,7 @@ raml:
     encodes:
       Contributor: ContributorNode
       License: LicenseNode
-  document:
+  root:
     encodes: ProjectNode
 
 nodeMappings:
@@ -66,31 +67,31 @@ nodeMappings:
         allowMultiple: true
 
       discussion:
-        propertyTerm: about.DiscussionChannel
+        propertyTerm: about.discussionChannel
         mandatory: false
         range: DiscussionChannelNode
         allowMultiple: true
 
       continuousIntegration:
-        propertyTerm: about.ContinuousIntegration
+        propertyTerm: about.continuousIntegration
         mandatory: false
         range: ContinuousIntegrationNode
         allowMultiple: true
 
       projectManagement:
-        propertyTerm: about.ProjectManagement
+        propertyTerm: about.projectManagementTool
         mandatory: false
         range: ProjectManagementNode
         allowMultiple: true
 
       licenses:
-        propertyTerm: about.License
+        propertyTerm: about.license
         mandatory: false
         range: LicenseNode
         allowMultiple: true
 
       contributors:
-        propertyTerm: about.Contributor
+        propertyTerm: about.contributor
         mandatory: false
         range: ContributorNode
         allowMultiple: true
@@ -114,7 +115,7 @@ nodeMappings:
         allowMultiple: true
 
       forkedFrom:
-        propertyTerm: forkedFrom
+        propertyTerm: about.forkedFrom
         mandatory: false
         range: uri
 

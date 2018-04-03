@@ -35,7 +35,7 @@ classTerms:
     displayName: DiscussionChannel
     description: Discussion channel for topics related to the repository
     properties:
-      - discussionChannelname
+      - discussionChannelName
       - discussionChannelType
       - discussionChannelUrl
 
@@ -172,3 +172,37 @@ propertyTerms:
     displayName: forkedFrom
     description: URI identifying another software project this project has been derived from.
     range: schema-org.isPartOf
+
+  configuredTool:
+    displayName: configuredTool
+    description: tool configured to fulfill an specific functionality in the project
+
+  discussionChannel:
+    displayName: discussionChannel
+    description: discussion channel associated to the project
+    range: DiscussionChannel
+    extends: configuredTool
+
+  continuousIntegration:
+    displayName: continuousIntegration
+    description: continuous integration system associated to the project
+    range: ContinuousIntegration
+    extends: configuredTool
+
+  projectManagementTool:
+    displayName: projectManagementTool
+    description: project management tool associated to the project
+    range: ProjectManagement
+    extends: configuredTool
+
+  license:
+    displayName: license
+    description: licenses associated to a project
+    range: string
+    extends: schema-org.license
+
+  contributor:
+    displayName: contributor
+    description: contributors associated to a project
+    range: Contributor
+    extends: schema-org.author
