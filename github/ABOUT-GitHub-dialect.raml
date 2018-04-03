@@ -11,8 +11,8 @@ uses:
 external:
   owl: http://www.w3.org/2002/07/owl#
 
-raml:
-  document:
+documents:
+  root:
     encodes: SoftwareProjectGitHubMetadataNode
 
 nodeMappings:
@@ -25,7 +25,7 @@ nodeMappings:
         range: string
       stargazersCount:
         propertyTerm: about-github.stargazersCount
-        range: string
+        range: integer
       name:
         propertyTerm: about-github.name
         range: string
@@ -37,9 +37,9 @@ nodeMappings:
         range: uri
       createdAt:
         propertyTerm: about-github.createdAt
-        range: string
+        range: dateTime
       languages:
-        propertyTerm: about-github.LanguageUsage
+        propertyTerm: about-github.languageUsage
         range: LanguageUsageNode
         allowMultiple: true
 
