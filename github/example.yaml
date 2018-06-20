@@ -1,12 +1,19 @@
 #%ABOUT-GitHub 0.1
 
 partOf: http://hello.world/hi.git
+forkedFrom: http://hello.world/hooo
 stargazersCount: 8
 owner: vromero
 ownerAvatar: https://avatars0.githubusercontent.com/u/1119553?s=460&v=4
 createdAt: 2012-12-31T23:57:00
+updatedAt: 2012-12-31T23:57:00
+private: true
 languages:
   - language: java
     usage: 10000
   - language: javascript
     usage: 1234
+license:
+  name: Apache-2.0
+  url: https://spdx.org/licenses/Apache-2.0.html
+

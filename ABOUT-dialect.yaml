@@ -1,4 +1,4 @@
-#%RAML 1.0 Dialect
+#%Dialect 1.0
 
 # Name of the dialect, this will define the header of the dialect documents
 dialect: ABOUT
@@ -7,7 +7,7 @@ version: 0.1
 
 # Vocabularies and externals can be referenced to use those terms in the dialect nodes
 uses:
-  about: ABOUT-vocabulary.raml
+  about: ABOUT-vocabulary.yaml
 
 external:
   schema-org: http://schema.org/
@@ -202,6 +202,10 @@ nodeMappings:
   ContributorNode:
     classTerm: about.Contributor
     mapping:
+      avatar:
+        propertyTerm: schema-org.image
+        mandatory: false
+        range: string
       givenName:
         propertyTerm: schema-org.giveName
         mandatory: false

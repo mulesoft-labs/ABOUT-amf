@@ -1,4 +1,4 @@
-#%RAML 1.0 Vocabulary
+#%Vocabulary 1.0
 
 vocabulary: ABOUT-GitHub-vocabulary
 
@@ -31,6 +31,10 @@ classTerms:
       - language
       - languageUsage
 
+  License:
+    displayName: license
+    description: License detected by GitHub
+
 propertyTerms:
 
   # scalar range, datatype property
@@ -61,6 +65,16 @@ propertyTerms:
     description: Date and time when the repository was created
     range: dateTime
 
+  updatedAt:
+    displayName: updateAt
+    description: Date and time when the repository was last updated
+    range: dateTime
+
+  isPrivate:
+    displayName: isPrivate
+    description: Defines if the repository is only visible to members
+    range: boolean
+
   languageUsage:
     displayName: language usage
     description: language usage for this project
@@ -76,3 +90,4 @@ propertyTerms:
     displayName: usage
     description: Usage of the programming language in bytes
     range: integer
+

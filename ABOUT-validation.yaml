@@ -3,7 +3,7 @@
 profile: ABOUT-validation
 
 prefixes:
-  about: https://mulesoft-labs.github.io/ABOUT-amf/ABOUT-vocabulary.raml#
+  about: http://mulesoft.com/vocabularies/about#
 
 warning:
   - development-status-from-repostatus

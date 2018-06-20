@@ -1,4 +1,4 @@
-#%RAML 1.0 Vocabulary
+#%Vocabulary 1.0
 
 vocabulary: ABOUT
 
@@ -171,7 +171,7 @@ propertyTerms:
   forkedFrom:
     displayName: forkedFrom
     description: URI identifying another software project this project has been derived from.
-    range: schema-org.isPartOf
+    range: uri
 
   configuredTool:
     displayName: configuredTool
